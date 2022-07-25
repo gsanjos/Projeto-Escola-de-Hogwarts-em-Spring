@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.modelmapper.ModelMapper;
 
@@ -16,6 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name="ALUNOS")
 public class AlunoEntity {
 
 	@Id
@@ -33,6 +35,41 @@ public class AlunoEntity {
 		AlunoDTO dto = mapper.map(this, AlunoDTO.class);
 		
 		return dto;
+	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCasa() {
+		return casa;
+	}
+
+	public void setCasa(String casa) {
+		this.casa = casa;
+	}
+
+	public AlunoEntity(int id, String nome, String casa) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.casa = casa;
+	}
+
+	public AlunoEntity() {
+		
 	}
 }
 
