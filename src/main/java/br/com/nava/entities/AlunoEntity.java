@@ -25,7 +25,7 @@ public class AlunoEntity {
 	private int id;
 	private String nome;
 	private String casa;
-	
+	private String email;
 	
 	// Método que converte uma Entity em DTO
 	public AlunoDTO toDTO() {
@@ -37,40 +37,6 @@ public class AlunoEntity {
 		return dto;
 	}
 	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getCasa() {
-		return casa;
-	}
-
-	public void setCasa(String casa) {
-		this.casa = casa;
-	}
-
-	public AlunoEntity(int id, String nome, String casa) {
-		super();
-		this.id = id;
-		this.nome = nome;
-		this.casa = casa;
-	}
-
-	public AlunoEntity() {
-		
-	}
 }
 
 

@@ -68,6 +68,7 @@ public class AlunoService {
 	public void delete(int id) {
 		alunoRepository.deleteById(id);
 	}
+	
 }
 
 
